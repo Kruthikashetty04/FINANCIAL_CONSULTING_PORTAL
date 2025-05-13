@@ -1,0 +1,35 @@
+{% extends 'admin/base/admin_sidebar.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Add Video</h2>
+    
+    <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate autocomplete="off">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="video_title">Video Title</label>
+            <input id="video_title" type="text" class="form-control" name="video_title" required autofocus>
+            <div class="invalid-feedback">Video title is required.</div>
+        </div>
+    
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="video_description">Video Description</label>
+            <input id="video_description" type="text" class="form-control" name="video_description" required>
+        </div>
+    
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="video">Upload Video</label>
+            <input type="file" id="video" class="form-control" name="video" accept="video/*" required>
+        </div>
+        
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="video_thumbnail">Video Thumbnail</label>
+            <input type="file" id="video_thumbnail" class="form-control" name="video_thumbnail" accept="image/*">
+        </div>
+    
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Create Video</button>
+        </div>
+    </form>
+{% endblock %}

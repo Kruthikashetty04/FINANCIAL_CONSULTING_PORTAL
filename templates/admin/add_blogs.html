@@ -1,0 +1,42 @@
+{% extends 'admin/base/admin_sidebar.html' %}
+{% load static %}
+
+{% block content %}
+    <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate autocomplete="off">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="blogs_author">Blog Author</label>
+            <input id="blogs_author" type="text" class="form-control" name="blogs_author" required>
+        </div>
+        
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="title">Blog Title</label>
+            <input id="title" type="text" class="form-control" name="title" required autofocus>
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="blogs_description">Blog Description</label>
+            <textarea id="blogs_description" class="form-control" name="blogs_description" rows="3" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="sub_title1">Sub Title 1</label>
+            <input id="sub_title1" type="text" class="form-control" name="sub_title1" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="sub_description1">Sub Description 1</label>
+            <textarea id="sub_description1" class="form-control" name="sub_description1" rows="3" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2 text-muted fw-bold" for="blogs_thumbnail">Blog Thumbnail</label>
+            <input type="file" id="blogs_thumbnail" class="form-control" name="blogs_thumbnail" accept="image/jpeg,image/png" required>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Create Blog</button>
+        </div>
+    </form>
+{% endblock %}

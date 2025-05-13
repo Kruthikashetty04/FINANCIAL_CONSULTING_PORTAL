@@ -1,0 +1,191 @@
+
+* {
+    margin: 0;
+    padding: 1px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url(https://wallpaperaccess.com/full/732232.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+	 /* rgba(0, 0, 0, 0.7) */
+    background:rgba(199, 97, 97, 0.7);
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #FFC107;
+}
+
+.dropdown {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+}
+
+.navbar ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 5px 10px;
+    color: white;
+}
+
+.login-btn {
+    background: #FFC107;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Dark overlay for better text visibility */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 60%;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #ddd;
+    margin: 10px 0;
+}
+
+.hero-content .btn {
+    background: #FFC107;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.hero-content .btn:hover {
+    background: #ff9800;
+}
+
+/* About Us & Membership Sections */
+.about, .membership {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-content, .membership-content {
+    max-width: 60%;
+    margin: auto;
+}
+
+.about h2, .membership h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about p, .membership p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.membership .btn {
+    background: #FFC107;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.membership .btn:hover {
+    background: #ff9800;
+}
+
+
+
+
